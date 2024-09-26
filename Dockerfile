@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install -r requirements.txt
+RUN pip install Flask
 
-CMD ["python3", "app.py"]
+COPY app.py /app/app.py
+
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
+
