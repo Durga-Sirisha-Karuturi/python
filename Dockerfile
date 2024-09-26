@@ -6,7 +6,7 @@ COPY . /app
 
 RUN pip install Flask
 
-COPY app.py /app/app.py
+COPY app.html /app/app.html
 
 CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
 
